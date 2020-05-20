@@ -1,0 +1,64 @@
+/* CSS Grid of 15 * 15 */
+.game-board{ 
+    display: grid;
+    grid-template-columns: repeat(15, 20px); 
+    grid-template-rows: repeat(15, 20px);
+    justify-content: center;
+   }
+
+.game-board > div{
+    border: 1px solid black;
+}   
+
+/*Just a simpler, but verbose way to write - div [class^="green"] */
+.green-home, .green{
+    background-color: green;
+}
+
+.yellow-home, .yellow{
+    background-color: yellow;
+}
+
+.blue-home, .blue{
+    background-color: blue;
+}
+
+.red-home, .red{
+    background-color: red;
+}
+
+.green-home {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 7;
+  }
+
+.yellow-home {
+    grid-column-start: 10;
+    grid-column-end: -1; /* can also write - span 6 */
+    grid-row-start: 1;
+    grid-row-end: 7;
+  }
+
+  .blue-home {
+    grid-column-start: 10;
+    grid-column-end: -1;
+    grid-row-start: 10;
+    grid-row-end: -1;
+    }
+
+  .red-home {
+    grid-column-start: 1;
+    grid-column-end: 7; 
+    grid-row-start: 10;
+    grid-row-end: -1;
+  
+  }
+
+.home{
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 7;
+    grid-row-end: 10;    
+}
