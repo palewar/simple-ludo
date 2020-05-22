@@ -1,8 +1,12 @@
+h1{
+  text-align: center;
+}
+
 /* CSS Grid of 15 * 15 */
 .game-board{ 
     display: grid;
-    grid-template-columns: repeat(15, 20px); 
-    grid-template-rows: repeat(15, 20px);
+    grid-template-columns: repeat(15, 5vmin); /* vmins instead of px helps to make the grid resize itself based on the screen size */
+    grid-template-rows: repeat(15, 5vmin);
     justify-content: center;
    }
 
