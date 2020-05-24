@@ -5,64 +5,123 @@ h1{
 /* CSS Grid of 15 * 15 */
 .game-board{ 
     display: grid;
-    grid-template-columns: repeat(15, 5vmin); /* vmins instead of px helps to make the grid resize itself based on the screen size */
+     /* vmins instead of px helps to make the grid resize itself based on the screen size */
+    grid-template-columns: repeat(15, 5vmin);
     grid-template-rows: repeat(15, 5vmin);
     justify-content: center;
    }
 
-.game-board > div{
+.box, .green, .yellow, .blue, .red {
     border: 1px solid black;
 }   
 
-/*Just a simpler, but verbose way to write - div [class^="green"] */
-.green-home, .green{
-    background-color: green;
-}
+.green-home{
+    background-color: white;
+    width: 20vmin-1px; /* Not the best way probably to substract the border-width */
+    height: 20vmin-1px;
+    box-shadow: 0 0 0 1px black; /* Real Border*/
+    border: 5vmin solid green; /* Inner square or Inner Border :-) */
 
-.yellow-home, .yellow{
-    background-color: yellow;
-}
-
-.blue-home, .blue{
-    background-color: blue;
-}
-
-.red-home, .red{
-    background-color: red;
-}
-
-.green-home {
+    /* 4 circles in one line. Is probably a hack. Need to come up with something better */
+    background: 
+    radial-gradient(circle at 25% 25%,green 3vmin, transparent 0),
+    radial-gradient(circle at 25% 75%,green 3vmin, transparent 0),
+    radial-gradient(circle at 75% 25%,green 3vmin, transparent 0),
+    radial-gradient(circle at 75% 75%,green 3vmin, transparent 0);
+    
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 7;
-  }
+}
+.green{
+  background-color: green;
+}
 
-.yellow-home {
-    grid-column-start: 10;
-    grid-column-end: -1; /* can also write - span 6 */
-    grid-row-start: 1;
-    grid-row-end: 7;
-  }
+.yellow-home{
+  background-color: white;
+  width: 20vmin-1px; /* Not the best way probably to substract the border-width */
+  height: 20vmin-1px;
+  box-shadow: 0 0 0 1px black;
+  border: 5vmin solid yellow;
 
-  .blue-home {
-    grid-column-start: 10;
-    grid-column-end: -1;
-    grid-row-start: 10;
-    grid-row-end: -1;
-    }
+  background: 
+    radial-gradient(circle at 25% 25%,yellow 3vmin, transparent 0),
+    radial-gradient(circle at 25% 75%,yellow 3vmin, transparent 0),
+    radial-gradient(circle at 75% 25%,yellow 3vmin, transparent 0),
+    radial-gradient(circle at 75% 75%,yellow 3vmin, transparent 0);
 
-  .red-home {
-    grid-column-start: 1;
-    grid-column-end: 7; 
-    grid-row-start: 10;
-    grid-row-end: -1;
-  
-  }
+  grid-column-start: 10;
+  grid-column-end: -1; /* can also write - span 6 */
+  grid-row-start: 1;
+  grid-row-end: 7;
+}
+.yellow{
+    background-color: yellow;
+}
+
+.blue-home{
+  background-color: white;
+  width: 20vmin-1px; /* Not the best way probably to substract the border-width */
+  height: 20vmin-1px;
+  box-shadow: 0 0 0 1px black;
+  border: 5vmin solid blue;
+
+  background: 
+    radial-gradient(circle at 25% 25%,blue 3vmin, transparent 0),
+    radial-gradient(circle at 25% 75%,blue 3vmin, transparent 0),
+    radial-gradient(circle at 75% 25%,blue 3vmin, transparent 0),
+    radial-gradient(circle at 75% 75%,blue 3vmin, transparent 0);
+
+  grid-column-start: 10;
+  grid-column-end: -1;
+  grid-row-start: 10;
+  grid-row-end: -1;
+} 
+.blue{
+    background-color: blue;
+}
+
+.red-home{
+  background-color: white;
+  width: 20vmin-1px; /* Not the best way probably to substract the border-width */
+  height: 20vmin-1px;
+  box-shadow: 0 0 0 1px black;
+  border: 5vmin solid red;
+
+  background: 
+    radial-gradient(circle at 25% 25%,red 3vmin, transparent 0),
+    radial-gradient(circle at 25% 75%,red 3vmin, transparent 0),
+    radial-gradient(circle at 75% 25%,red 3vmin, transparent 0),
+    radial-gradient(circle at 75% 75%,red 3vmin, transparent 0);
+
+  grid-column-start: 1;
+  grid-column-end: 7; 
+  grid-row-start: 10;
+  grid-row-end: -1; 
+}
+.red{
+    background-color: red;
+}
 
 .home{
     grid-column-start: 7;
     grid-column-end: 10;
     grid-row-start: 7;
-    grid-row-end: 10;    
+    grid-row-end: 10;   
+    border: 1px solid black; 
+
+    /* Finally figured out how to make all the 4 triangles using just a single line.
+     Took lot of digging and reading of various types of gradients. 
+     Thanks MDN Web Docs for immense help. Pie chart example did the trick
+     https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient */
+    background: 
+    conic-gradient(
+      from -45deg, 
+    yellow 90deg,
+    blue 90deg 180deg, 
+    red 180deg 270deg,
+    green 270deg 360deg
+     );
+  
 }
