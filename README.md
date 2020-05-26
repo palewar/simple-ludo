@@ -9,8 +9,8 @@ No images are used. Complete design is done using HTML & CSS
 
 CSS Concepts Used:
 
-CSS Grid - For General Layout
-Conic Gradient - For 4 trianles in center sq
+CSS Grid - For General Layout\
+Conic Gradient - For 4 trianles in center sq\
 Radial Gradient - For 4 Circles in Corner Squares
 
 CSS can be improved a lot. Any inputs and suggestions are most welcome. 
