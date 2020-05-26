@@ -1,8 +1,14 @@
-h1{
-  text-align: center;
-}
+html { font-size: 2vmin; } 
+/* Responsive/Fluid Fonts
+https://www.smashingmagazine.com/2016/05/fluid-typography/
+*/
+h1 { 
+  font-size: 2rem; 
+  text-align: center; }
 
-/* CSS Grid of 15 * 15 */
+/* CSS Grid of 15 * 15 
+https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
+ */
 .game-board{ 
     display: grid;
      /* vmins instead of px helps to make the grid resize itself based on the screen size */
@@ -13,30 +19,34 @@ h1{
 
 .box, .green, .yellow, .blue, .red {
     border: 1px solid black;
+    height: 5vmin-1px; /* Not the best way probably to substract the border-width like this*/
+    width: 5vmin-1px;
+    line-height: 5vmin;
+    font-size: 3.5vmin; 
+    text-align: center;
 }   
+
 
 .green-home{
     background-color: white;
-    width: 20vmin-1px; /* Not the best way probably to substract the border-width */
+    width: 20vmin-1px; /* Not the best way probably to substract the border-width like this*/
     height: 20vmin-1px;
     box-shadow: 0 0 0 1px black; /* Real Border*/
-    border: 5vmin solid green; /* Inner square or Inner Border :-) */
+    border: 5vmin solid limegreen; /* Inner square or Inner Border :-) */
 
     /* 4 circles in one line. Is probably a hack. Need to come up with something better */
     background: 
-    radial-gradient(circle at 25% 25%,green 3vmin, transparent 0),
-    radial-gradient(circle at 25% 75%,green 3vmin, transparent 0),
-    radial-gradient(circle at 75% 25%,green 3vmin, transparent 0),
-    radial-gradient(circle at 75% 75%,green 3vmin, transparent 0);
+    radial-gradient(circle at 25% 25%,limegreen 3vmin, transparent 0),
+    radial-gradient(circle at 25% 75%,limegreen 3vmin, transparent 0),
+    radial-gradient(circle at 75% 25%,limegreen 3vmin, transparent 0),
+    radial-gradient(circle at 75% 75%,limegreen 3vmin, transparent 0);
     
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 7;
 }
-.green{
-  background-color: green;
-}
+.green{background-color: limegreen;}
 
 .yellow-home{
   background-color: white;
@@ -56,9 +66,7 @@ h1{
   grid-row-start: 1;
   grid-row-end: 7;
 }
-.yellow{
-    background-color: yellow;
-}
+.yellow{background-color: yellow;}
 
 .blue-home{
   background-color: white;
@@ -78,9 +86,7 @@ h1{
   grid-row-start: 10;
   grid-row-end: -1;
 } 
-.blue{
-    background-color: blue;
-}
+.blue{background-color: blue;}
 
 .red-home{
   background-color: white;
@@ -100,9 +106,7 @@ h1{
   grid-row-start: 10;
   grid-row-end: -1; 
 }
-.red{
-    background-color: red;
-}
+.red{background-color: red;}
 
 .home{
     grid-column-start: 7;
@@ -121,7 +125,7 @@ h1{
     yellow 90deg,
     blue 90deg 180deg, 
     red 180deg 270deg,
-    green 270deg 360deg
+    limegreen 270deg 360deg
      );
   
 }
