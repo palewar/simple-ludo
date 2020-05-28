@@ -1,5 +1,7 @@
 # simple-ludo
 
+Ludo is a Board game - https://en.wikipedia.org/wiki/Ludo_(board_game)
+
 Demo - https://palewar.github.io/simple-ludo/
 
 Current Status:
