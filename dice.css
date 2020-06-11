@@ -1,5 +1,12 @@
+.dice {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(20deg) rotateY(20deg) translateX(0);
+}
+
 .face {
   display: grid;
+  position: absolute;
   grid-template-areas:
       "a . c"
       "e g f"
@@ -54,4 +61,23 @@
 }
 .dot:nth-child(odd):last-child {
   grid-area: g;
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(15vmin);
+}
+.back {
+  transform: rotateX(180deg) translateZ(15vmin);
+}
+.left {
+ transform: rotateY(-90deg) translateZ(15vmin);
+}
+.right {
+transform: rotateY(90deg) translateZ(15vmin);
+}
+.top {
+transform: rotateX(90deg) translateZ(15vmin);
+}
+.bottom {
+transform: rotateX(-90deg) translateZ(15vmin);
 }
