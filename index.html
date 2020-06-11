@@ -1,109 +1,172 @@
 <html>
-    <head>
-        <title>Simone's Ludo</title>
-        <link rel="stylesheet" type="text/css" href="board.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
-    </head>
-    <body>
 
-        <h1>Simone's Ludo</h1>
-        <div class = "game-board">
-            <!--1st Row-->
-            <div class="green-home"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="yellow-home"></div>
-            <!--2nd Row-->
-            <div class="box"></div>
-            <div class="yellow"></div>
-            <div class="yellow"></div>
-            <!--3rd Row-->
-            <div class="box">&#9734;</div> <!--Star Box-->
-            <div class="yellow"></div>
-            <div class="box"></div>
-            <!--4th Row-->
-            <div class="box"></div>
-            <div class="yellow"></div>
-            <div class="box"></div>
-            <!--5th Row-->
-            <div class="box"></div>
-            <div class="yellow"></div>
-            <div class="box"></div>
-            <!--6th Row-->
-            <div class="box"></div>
-            <div class="yellow"></div>
-            <div class="box"></div>
-            <!--7th Row-->
-            <div class="box"></div>
-            <div class="green"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="home"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box">&#9734;</div> <!--Star Box-->
-            <div class="box"></div>
-            <div class="box"></div>
-            <!--8th Row-->
-            <div class="box"></div>
-            <div class="green"></div>
-            <div class="green"></div>
-            <div class="green"></div>
-            <div class="green"></div>
-            <div class="green"></div>
-            <div class="blue"></div>
-            <div class="blue"></div>
-            <div class="blue"></div>
-            <div class="blue"></div>
-            <div class="blue"></div>
-            <div class="box"></div>
-            <!--9th Row-->
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box">&#9734;</div> <!--Star Box-->
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="blue"></div>
-            <div class="box"></div>
-            <!--10th Row-->
-            <div class="red-home"></div>
-            <div class="box"></div>
-            <div class="red"></div>
-            <div class="box"></div>
-            <div class="blue-home"></div>
-            <!--11th Row-->
-            <div class="box"></div>
-            <div class="red"></div>
-            <div class="box"></div>
-            <!--12th Row-->
-            <div class="box"></div>
-            <div class="red"></div>
-            <div class="box"></div>
-            <!--13th Row-->
-            <div class="box"></div>
-            <div class="red"></div>
-            <div class="box">&#9734;</div> <!--Star Box-->
-            <!--14th Row-->
-            <div class="red"></div>
-            <div class="red"></div>
-            <div class="box"></div>
-            <!--15th Row-->
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
+<head>
+   <title>Simone's Ludo</title>
+   <link rel="stylesheet" type="text/css" href="board.css" />
+   <link rel="stylesheet" type="text/css" href="dice.css" />
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+   <!--responsive viewport tag-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-    <!-- BOTTOM RIGHT RIBBON-->
-    <a class="github-fork-ribbon right-bottom fixed" href="https://github.com/palewar/simple-ludo" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
-    <!-- BOTTOM RIGHT RIBBON-->
-    </body>
+<body>
+
+   <h1>Simone's Ludo</h1>
+
+   <div class="game-table">
+
+      <div class="game-board">
+         <!--1st Row-->
+         <div class="green-home"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="yellow-home"></div>
+         <!--2nd Row-->
+         <div class="box"></div>
+         <div class="yellow"></div>
+         <div class="yellow"></div>
+         <!--3rd Row-->
+         <!--Star Box-->
+         <div class="box">&#9734;</div>
+         <div class="yellow"></div>
+         <div class="box"></div>
+         <!--4th Row-->
+         <div class="box"></div>
+         <div class="yellow"></div>
+         <div class="box"></div>
+         <!--5th Row-->
+         <div class="box"></div>
+         <div class="yellow"></div>
+         <div class="box"></div>
+         <!--6th Row-->
+         <div class="box"></div>
+         <div class="yellow"></div>
+         <div class="box"></div>
+         <!--7th Row-->
+         <div class="box"></div>
+         <div class="green"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="home"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <!--Star Box-->
+         <div class="box">&#9734;</div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <!--8th Row-->
+         <div class="box"></div>
+         <div class="green"></div>
+         <div class="green"></div>
+         <div class="green"></div>
+         <div class="green"></div>
+         <div class="green"></div>
+         <div class="blue"></div>
+         <div class="blue"></div>
+         <div class="blue"></div>
+         <div class="blue"></div>
+         <div class="blue"></div>
+         <div class="box"></div>
+         <!--9th Row-->
+         <div class="box"></div>
+         <div class="box"></div>
+         <!--Star Box-->
+         <div class="box">&#9734;</div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="blue"></div>
+         <div class="box"></div>
+         <!--10th Row-->
+         <div class="red-home"></div>
+         <div class="box"></div>
+         <div class="red"></div>
+         <div class="box"></div>
+         <div class="blue-home"></div>
+         <!--11th Row-->
+         <div class="box"></div>
+         <div class="red"></div>
+         <div class="box"></div>
+         <!--12th Row-->
+         <div class="box"></div>
+         <div class="red"></div>
+         <div class="box"></div>
+         <!--13th Row-->
+         <div class="box"></div>
+         <div class="red"></div>
+         <!--Star Box-->
+         <div class="box">&#9734;</div>
+         <!--14th Row-->
+         <div class="red"></div>
+         <div class="red"></div>
+         <div class="box"></div>
+         <!--15th Row-->
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+      </div>
+
+      <!--Dice original design by https://codepen.io/LandonSchropp/pen/KpzzGo 
+      AND converted to Grid Layout by:
+      https://dev.to/ekeijl/creating-dice-using-css-grid-j4 
+      AND Rotated and Animated using code from:
+      https://codepen.io/jpanter/pen/PGqJOm -->
+
+      <div class="face">
+         <span class="dot"></span>
+      </div>
+
+      <div class="face">
+         <span class="dot"></span>
+         <span class="dot"></span>
+      </div>
+
+      <div class="face">
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+      </div>
+
+      <div class="face">
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+      </div>
+
+      <div class="face">
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+      </div>
+
+      <div class="face">
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+      </div>
+   </div>
+
+
+
+   <!-- BOTTOM RIGHT RIBBON-->
+   <a class="github-fork-ribbon right-bottom fixed" href="https://github.com/palewar/simple-ludo"
+      data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+   <!-- BOTTOM RIGHT RIBBON-->
+</body>
+
 </html>

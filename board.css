@@ -4,7 +4,17 @@ https://www.smashingmagazine.com/2016/05/fluid-typography/
 */
 h1 { 
   font-size: 2rem; 
-  text-align: center; }
+  text-align: center; 
+}
+
+.game-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
 
 /* CSS Grid of 15 * 15 
 https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
@@ -15,24 +25,28 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
     grid-template-columns: repeat(15, 5vmin);
     grid-template-rows: repeat(15, 5vmin);
     justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
    }
 
 .box, .green, .yellow, .blue, .red {
     border: 1px solid black;
-    height: 5vmin-1px; /* Not the best way probably to substract the border-width like this*/
-    width: 5vmin-1px;
+    height: 5vmin;
+    width: 5vmin;
     line-height: 5vmin;
     font-size: 3.5vmin; 
     text-align: center;
+    box-sizing: border-box;
 }   
 
 
 .green-home{
     background-color: white;
-    width: 20vmin-1px; /* Not the best way probably to substract the border-width like this*/
-    height: 20vmin-1px;
+    width: 30vmin;
+    height: 30vmin;
     box-shadow: 0 0 0 1px black; /* Real Border*/
     border: 5vmin solid limegreen; /* Inner square or Inner Border :-) */
+    box-sizing: border-box;
 
     /* 4 circles in one line. Is probably a hack. Need to come up with something better */
     background: 
@@ -50,10 +64,11 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
 
 .yellow-home{
   background-color: white;
-  width: 20vmin-1px; /* Not the best way probably to substract the border-width */
-  height: 20vmin-1px;
+  width: 30vmin;
+  height: 30vmin;
   box-shadow: 0 0 0 1px black;
   border: 5vmin solid yellow;
+  box-sizing: border-box;
 
   background: 
     radial-gradient(circle at 25% 25%,yellow 3vmin, transparent 0),
@@ -70,10 +85,11 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
 
 .blue-home{
   background-color: white;
-  width: 20vmin-1px; /* Not the best way probably to substract the border-width */
-  height: 20vmin-1px;
+  width: 30vmin;
+  height: 30vmin;
   box-shadow: 0 0 0 1px black;
   border: 5vmin solid blue;
+  box-sizing: border-box;
 
   background: 
     radial-gradient(circle at 25% 25%,blue 3vmin, transparent 0),
@@ -90,10 +106,11 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
 
 .red-home{
   background-color: white;
-  width: 20vmin-1px; /* Not the best way probably to substract the border-width */
-  height: 20vmin-1px;
+  width: 30vmin; 
+  height: 30vmin;
   box-shadow: 0 0 0 1px black;
   border: 5vmin solid red;
+  box-sizing: border-box;
 
   background: 
     radial-gradient(circle at 25% 25%,red 3vmin, transparent 0),
@@ -113,7 +130,8 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
     grid-column-end: 10;
     grid-row-start: 7;
     grid-row-end: 10;   
-    border: 1px solid black; 
+    border: 1px solid black;
+    box-sizing: border-box; 
 
     /* Finally figured out how to make all the 4 triangles using just a single line.
      Took lot of digging and reading of various types of gradients. 
