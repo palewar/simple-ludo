@@ -27,6 +27,7 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
     justify-content: center;
     align-content: center;
     box-sizing: border-box;
+    margin: 3vmin;
    }
 
 .box, .green, .yellow, .blue, .red {
