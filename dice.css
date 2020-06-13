@@ -10,6 +10,11 @@
   transform: rotateX(0deg) rotateY(0deg) translateX(0);
   width: 100%;
   height: 100%;
+
+  animation-name: roll-dice;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
 }
 
 .face {
@@ -88,4 +93,13 @@ transform: rotateX(90deg) translateZ(15vmin);
 }
 .bottom {
 transform: rotateX(-90deg) translateZ(15vmin);
+}
+
+@keyframes roll-dice {
+  0% { transform: rotateX(90deg) rotateY(360deg) rotateZ(0deg) translateX(0); }
+  35% { transform: rotateX(-180deg) rotateY(-90deg) rotateZ(0deg) translateX(0); }
+  45% { transform: rotateX(-180deg) rotateY(-90deg) rotateZ(0deg) translateX(0); }
+  65% { transform: rotateX(0deg) rotateY(0deg) rotateZ(-360deg) translateX(0); }
+  75% { transform: rotateX(0deg) rotateY(0deg) rotateZ(-360deg) translateX(0); }
+  100% { transform: rotateX(90deg) rotateY(360deg) rotateZ(0deg) translateX(0); }
 }
