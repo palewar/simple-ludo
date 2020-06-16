@@ -2,6 +2,7 @@
   width: 15vmin;
   height: 15vmin;
   transform-style: preserve-3d;
+  position: relative;
 }
 
 .dice {
@@ -12,9 +13,9 @@
   height: 100%;
 
   animation-name: roll-dice;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-duration: 5s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
 }
 
 .face {
