@@ -42,6 +42,7 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
 
 
 .green-home{
+    position: relative;
     background-color: white;
     width: 30vmin;
     height: 30vmin;
@@ -49,12 +50,12 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
     border: 5vmin solid limegreen; /* Inner square or Inner Border :-) */
     box-sizing: border-box;
 
-    /* 4 circles in one line. Is probably a hack. Need to come up with something better */
+    /* 4 circles as background */
     background: 
     radial-gradient(circle at 25% 25%,limegreen 3vmin, transparent 0),
     radial-gradient(circle at 25% 75%,limegreen 3vmin, transparent 0),
     radial-gradient(circle at 75% 25%,limegreen 3vmin, transparent 0),
-    radial-gradient(circle at 75% 75%,limegreen 3vmin, transparent 0);
+    radial-gradient(circle at 75% 75%,limegreen 3vmin, transparent 0); 
     
     grid-column-start: 1;
     grid-column-end: 7;
@@ -106,6 +107,7 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
 .blue{background-color: blue;}
 
 .red-home{
+  position: relative;
   background-color: white;
   width: 30vmin; 
   height: 30vmin;
@@ -127,6 +129,7 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
 .red{background-color: red;}
 
 .home{
+    position: relative;
     grid-column-start: 7;
     grid-column-end: 10;
     grid-row-start: 7;
