@@ -31,6 +31,7 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
    }
 
 .box, .green, .yellow, .blue, .red {
+    position: relative;
     border: 1px solid black;
     height: 5vmin;
     width: 5vmin;
