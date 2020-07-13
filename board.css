@@ -7,19 +7,18 @@ h1 {
   text-align: center; 
 }
 
+
 .game-table {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template: 5vmin auto 5vmin / 5vmin auto 5vmin;
   justify-content: center;
-  vertical-align: center;
-  flex-wrap: wrap;
-  align-content: center;
 }
 
 /* CSS Grid of 15 * 15 
 https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
  */
 .game-board{ 
+    grid-column: 2 / 3; /* This grid is itself inside another parent grid. So it's second-row, second-column in parent layout */
     display: grid;
      /* vmins instead of px helps to make the grid resize itself based on the screen size */
     grid-template-columns: repeat(15, 5vmin);
@@ -27,7 +26,7 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
     justify-content: center;
     align-content: center;
     box-sizing: border-box;
-    margin: 3vmin;
+    margin: 0.5vmin;
    }
 
 .box, .green, .yellow, .blue, .red {
@@ -150,5 +149,43 @@ https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row
     red 180deg 270deg,
     limegreen 270deg 360deg
      );
-  
+}
+
+.yellow-player{
+  grid-column: 1 / 4;
+  line-height: 7vmin;
+  vertical-align: bottom;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transform: rotate(180deg);
+  transform-origin: center;
+  padding-left: 6vmin;
+}
+.blue-player{
+  display: flex;
+  grid-column: 3 / 4;
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-items: flex-end;
+}
+.blue-player-name{
+  display: block;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  white-space: nowrap;
+}
+.red-player{
+  grid-column: 1 /4;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 5.5vmin;
+}
+.green-player{
+  grid-column: 1 / 2;
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  transform: rotate(90deg);
+  transform-origin: top right;
+  padding-left: 5vmin;
 }
